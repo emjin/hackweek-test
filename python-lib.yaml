@@ -1,0 +1,15 @@
+templates:
+- declaration: inside_init_of_class()
+  contents:
+    patterns:
+    - pattern-inside: |
+            class $A(...):
+                ...
+    - pattern-inside: |
+            def __init__(...):
+                ...
+    - pattern-not-inside: |
+            def __init__(...):
+                ...
+                def $F(...):
+                    ...
