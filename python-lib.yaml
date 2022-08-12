@@ -13,3 +13,9 @@ templates:
                 ...
                 def $F(...):
                     ...
+- declaration: command(keyword)
+  contents: |
+    { patterns:
+         [ { pattern: keyword + " ..."},
+           { "pattern-not": keyword },
+           { "pattern-not": keyword + " None"} ] }
